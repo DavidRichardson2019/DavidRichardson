@@ -14,66 +14,38 @@ body{background:url('../Sources/WebsitePic.jpg');
         background-repeat: no-repeat;
         background-position:top center;
         background-attachment: fixed;
-        background-size:auto 125vh;}
+        background-size:contain;
+      }
 .storyText {
     padding:5px;
     line-height: 25px;
 }
-#menuBar {
-    position: fixed;
-    z-index: 1;
-    width:100%;
-    height:50px;
-    background-color:RGB(44,147,139);
-}
-    #name {
-        float:left;
-        line-height: 40px;
-        margin:5px;
-        vertical-align: middle;
-    }
-    #desktopMenu {
-        display:inline-flex;
-        float:right;
-        line-height: 40px;
-        vertical-align: middle;
-        margin-top: 2px;
-    }
-        #desktopMenu li {
-            width:200px;
-            text-align: center;
-            margin-right: 20px;
-            border-style: solid;
-            border-color: RGB(35,35,35);
-            border-width: medium;
-        }
-#mobileMenu {
-    display: none;
-}
 #head {
     width:100%;
-    height:90vh;
+    height:87vh;
     background-color:RGBA(254,254,254, 0);
     color:RGB(254, 254, 254);
     vertical-align: middle;
     text-align: center;
+    display: table;
+    margin:0;
+    padding:0;
 }
-    #imgContainer {
-        height:100vh;
-        position: fixed;
-        top:;
-        z-index: -1;
-        
+    #textContainer {
+      display: inline-block;
+      background-color: RGB(35,35,35);
+      position: relative;
+      top: 50%;
+      transform: perspective(1px) translateY(42.5vh);
+      padding: 10px;
+      border-radius: 10px;
+
     }
-    /*img {
-        height: 100vh;
-    }*/
-    #headTitle {
-        line-height: 400px;
-    }
-    .headSubText {
-        line-height: 50px;
-    }
+      #headTitle {
+          font-size: 5em;
+          color: RGB(254,254,254);
+      }
+
 .sections {
     width:100%;
     height:90vh;
@@ -141,7 +113,29 @@ body{background:url('../Sources/WebsitePic.jpg');
 #sec4 {
     background-color: RGB(254,254,254);
     color:RGB(35,35,35);
+
 }
+  #content4 {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+    #story4wrapper {
+      width:70%;
+    }
+    #ul4wrapper {
+      clear: both;
+      line-height: normal;
+    }
+      #ul4 {
+
+      }
+        #ul4 li {
+          list-style-type: circle;
+          padding: 1vh;
+          font-size: 1.5em;
+        }
+
 #s5style1 {
     background-color: RGB(35,35,35);
     width:100%;
@@ -154,6 +148,49 @@ body{background:url('../Sources/WebsitePic.jpg');
     background-color: RGB(35,35,35);
     color:RGB(254,254,254);
 }
+  #linkWraper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+    .contactDivWrapper {
+        line-height: normal;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+      .contactDivWrapper a {
+        text-decoration: none;
+        color:RGB(254,254,254);
+      }
+      .contactDiv {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:105%;
+
+        width: 20vh;
+        height: 20vh;
+        border-radius: 10vh;
+      }
+
+      #GitLink {
+        background-image: url(../logos/github.png);
+      }
+      #FacebookLink {
+        background-image: url(../logos/facebook.png);
+      }
+      #KwadYoutubeLink {
+        background-image: url(../logos/youtube.png);
+      }
+      #MainYoutubeLink {
+        background-image: url(../logos/youtube.png);
+      }
+      #RotorBuildsLink {
+        background-image: url(../logos/rotorbuilds.png);
+      }
+
 @media (max-width: 1400px){
     h1 {font-size: 3em;}
     h3 {font-size: 2em;}
@@ -163,7 +200,9 @@ body{background:url('../Sources/WebsitePic.jpg');
         background-repeat: no-repeat;
         background-position:top center;
         background-attachment: fixed;
-        background-size:auto 65vh;}
+        background-size:contain;
+
+      }
     #head {height: 60vh;}
     #desktopMenu {
         display: none;
